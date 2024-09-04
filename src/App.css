@@ -1,52 +1,68 @@
-﻿nav ul {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
+﻿body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
     padding: 0;
 }
 
-nav li {
-    margin: 0 15px;
+.app {
+    text-align: center;
 }
 
-nav a {
-    text-decoration: none;
-    color: #61dafb;
+.top-nav {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 1em 0;
 }
 
-    nav a:hover {
-        color: #21a1f1;
+    .top-nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 18px;
     }
 
-.App {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding: 20px;
-}
+        .top-nav a:hover {
+            text-decoration: underline;
+        }
 
-h2 {
-    color: #333;
+.streamlist-container {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 form {
     margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; 
 }
 
-input {
-    padding: 8px;
-    margin-right: 10px;
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    width: 300px; /* Adjust the width to make the input bar shorter */
     border: 1px solid #ccc;
     border-radius: 4px;
 }
 
 button {
-    padding: 8px 12px;
-    border: none;
-    background-color: #61dafb;
-    color: white;
-    border-radius: 4px;
+    padding: 10px 15px;
+    font-size: 16px;
     cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
 }
+
+    button:hover {
+        background-color: #0056b3;
+    }
 
 ul {
     list-style-type: none;
@@ -54,19 +70,27 @@ ul {
 }
 
 li {
+    background-color: white;
     margin: 10px 0;
-    padding: 10px;
-    background-color: #f4f4f4;
-    border-radius: 4px;
+    padding: 15px;
+    border-radius: 5px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
 }
 
-span {
+    li.completed span {
+        text-decoration: line-through;
+    }
+
+.actions button {
+    margin-left: 5px;
+    background: none;
+    border: none;
     cursor: pointer;
+    font-size: 18px;
 }
 
-    span:hover {
-        color: #61dafb;
+    .actions button:hover {
+        color: #007bff;
     }
